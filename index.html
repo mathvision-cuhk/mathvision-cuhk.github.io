@@ -184,13 +184,32 @@
       <div class="columns is-centered m-6">
         <div class="column is-full has-text-centered content">
           <div class="content has-text-centered">
-            <img src="static/assets/figure1.png" alt="geometric reasoning" width="100%" />
-            <p> The accuracies of four prominent Large Multimodal Models (LMMs), random chance, and human
-              performance are evaluated on our proposed MATH-Vision (MATH-V) across 16 subjects and 5 levels of
-              difficulty,
-              with Level 1 being the easiest and Level 5 the most challenging. Human performance is assessed using the
-              testmini
-              subset.</b>
+            <img src="static/assets/figure1_new.png" alt="geometric reasoning" width="81%" />
+            <p>
+              <b class="best-score-text">[2024-05-20]</b>
+              (a) Zero-shot accuracies of four prominent Large Multimodal Models (LMMs), random chance, and human
+              performance are evaluated on our proposed MATH-V across 16 subjects. Teal means newly introduced subjects.
+              (b) Examples of easy problems in MATH-V failed by top-performing LMMs on MathVista. The three questions
+              come from tests designed for elementary school students.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="margin-top: -90px; margin-bottom: -100px;">
+      <div class="columns is-centered m-6">
+        <div class="column is-full has-text-centered content">
+          <div class="content has-text-centered">
+            <img src="static/assets/figure1.png" alt="geometric reasoning" width="90%" />
+            <p>
+              <b class="best-score-text">[2024-02-21]</b>
+              The accuracies of four prominent Large Multimodal Models (LMMs), random chance, and human performance are
+              evaluated on our proposed MATH-Vision (MATH-V) across 16 subjects and 5 levels of
+              difficulty, with Level 1 being the easiest and Level 5 the most challenging. Human performance is assessed
+              using the testmini subset.
             </p>
           </div>
         </div>
@@ -240,14 +259,15 @@
           <h2 class="title is-3" id="leaderboard">Leaderboard on test</h2>
           <div class="content">
             <p class="mt-3">Accuracy scores on the <b>test</b> set
-              of <b>Math-Vision (Math-V)</b>.
+              of <b>MATH-Vision (MATH-V)</b>.
             </p>
+            <p>🚨 To submit your results to the leaderboard, please send to <a href="mailto:wangk.gm@gmail.com">this email</a> with your result in <a href="static/assets/result.html" download="result.html">this</a> format.</p>
 
             <table class="js-sort-table" id="results">
               <tr>
                 <td class="js-sort-number"><strong>#</strong></td>
                 <td class="js-sort-number"><strong>Model</strong></td>
-                <!-- <td class="js-sort-number"><strong>Source</strong></td> -->
+                <td class="js-sort-number"><strong>Source</strong></td>
                 <td class="js-sort-number"><strong>Date</strong></td>
                 <td class="js-sort-number"><strong><u>ALL</u></strong></td>
                 <td class="js-sort-number"><strong>Alg</strong></td>
@@ -269,55 +289,103 @@
               </tr>
               <tr>
                 <td>0</td>
-                <td><b class="">Human* (testmini)</b></td>
-                <!-- <td><a href="https://github.com/InternLM/InternLM-XComposer" class="ext-link"
-                style="font-size: 16px;">Link</a></td> -->
-                <td>2024-02-21</td>
-                <td><b class="">75.66</b></td>
-                <td>57.9</td>
-                <td>79.0</td>
-                <td>100.0</td>
-                <td>100.0</td>
-                <td>47.4</td>
-                <td>94.7</td>
-                <td>89.5</td>
-                <td>63.2</td>
-                <td>63.2</td>
-                <td>36.8</td>
-                <td>52.6</td>
-                <td>73.7</td>
-                <td>89.5</td>
-                <td>89.5</td>
-                <td>100.0</td>
-                <td>73.7</td>
+                <td><b class="">Human</b></td>
+                <td><a href="https://huggingface.co/datasets/MathLLMs/MathVision" class="ext-link"
+                    style="font-size: 16px;">Link</a></td>
+                <td>2024-04-05</td>
+                <td><b class="">68.82</b></td>
+                <td>55.1</td>
+                <td>78.6</td>
+                <td>99.6</td>
+                <td>98.4</td>
+                <td>43.5</td>
+                <td>98.5</td>
+                <td>91.3</td>
+                <td>62.2</td>
+                <td>61.3</td>
+                <td>33.5</td>
+                <td>47.2</td>
+                <td>73.5</td>
+                <td>87.3</td>
+                <td>93.1</td>
+                <td>99.8</td>
+                <td>69.0</td>
               </tr>
-              <td>1</td>
-              <td><b class="best-score-text">CoT GPT4V 🥇</b></td>
-              <!-- <td><a href="https://github.com/InternLM/InternLM-XComposer" class="ext-link"
-              style="font-size: 16px;">Link</a></td> -->
-              <td>2024-02-21</td>
-              <td><b class="best-score-text">23.98</b></td>
-              <td>26.7</td>
-              <td>26.2</td>
-              <td>38.6</td>
-              <td>22.1</td>
-              <td>24.4</td>
-              <td>19.4</td>
-              <td>27.9</td>
-              <td>23.3</td>
-              <td>25.2</td>
-              <td>17.3</td>
-              <td>21.4</td>
-              <td>23.4</td>
-              <td>23.8</td>
-              <td>25.9</td>
-              <td>4.4</td>
-              <td>25.6</td>
+              <tr>
+                <td>1</td>
+                <td><b class="best-score-text">GPT-4o 🥇</b></td>
+                <td><a href="https://openai.com/index/hello-gpt-4o/" class="ext-link" style="font-size: 16px;">Link</a>
+                </td>
+                <td>2024-05-19</td>
+                <td><b class="best-score-text">30.39</b></td>
+                <td>42.0</td>
+                <td>39.3</td>
+                <td>49.3</td>
+                <td>28.9</td>
+                <td>25.6</td>
+                <td>22.4</td>
+                <td>24.0</td>
+                <td>23.3</td>
+                <td>29.4</td>
+                <td>17.3</td>
+                <td>29.8</td>
+                <td>30.1</td>
+                <td>29.1</td>
+                <td>44.8</td>
+                <td>34.8</td>
+                <td>17.9</td>
               </tr>
               <tr>
                 <td>2</td>
+                <td><b class="best-score-text">GPT-4 Turbo 🥇</b></td>
+                <td><a href="https://platform.openai.com/docs/models/gpt-4-and-gpt-4-turbo" class="ext-link"
+                    style="font-size: 16px;">Link</a></td>
+                <td>2024-05-19</td>
+                <td><b class="best-score-text">30.26</b></td>
+                <td>37.7</td>
+                <td>33.3</td>
+                <td>46.4</td>
+                <td>25.0</td>
+                <td>28.6</td>
+                <td>25.3</td>
+                <td>15.4</td>
+                <td>27.8</td>
+                <td>31.9</td>
+                <td>30.6</td>
+                <td>29.0</td>
+                <td>31.9</td>
+                <td>28.7</td>
+                <td>37.9</td>
+                <td>17.4</td>
+                <td>23.2</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td><b class="best-score-text">CoT GPT4V 🥈</b></td>
+                <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
+                <td>2024-02-21</td>
+                <td><b class="best-score-text">23.98</b></td>
+                <td>26.7</td>
+                <td>26.2</td>
+                <td>38.6</td>
+                <td>22.1</td>
+                <td>24.4</td>
+                <td>19.4</td>
+                <td>27.9</td>
+                <td>23.3</td>
+                <td>25.2</td>
+                <td>17.3</td>
+                <td>21.4</td>
+                <td>23.4</td>
+                <td>23.8</td>
+                <td>25.9</td>
+                <td>4.4</td>
+                <td>25.6</td>
+              </tr>
+              <tr>
+                <td>4</td>
                 <td><b class="best-score-text">GPT4V 🥈</b></td>
-                <!-- <td><a href="https://github.com/QwenLM/Qwen-VL" class="ext-link" style="font-size: 16px;">Link</a></td> -->
+                <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
                 <td>2024-02-21</td>
                 <td><b class="best-score-text">22.76</b></td>
                 <td>27.3</td>
@@ -338,12 +406,35 @@
                 <td>25.6</td>
               </tr>
               <tr>
-                <td>3</td>
-                <td><b class="best-score-text">Gemini Pro 🥉</b></td>
-                <!-- <td><a href="https://github.com/Alpha-VLLM/LLaMA2-Accessory/tree/main/SPHINX" class="ext-link"
-                style="font-size: 16px;">Link</a></td> -->
+                <td>5</td>
+                <td><b class="best-score-text">Gemini-1.5 Pro 🥉</b></td>
+                <td><a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf"
+                    class="ext-link" style="font-size: 16px;">Link</a></td>
+                <td>2024-05-17</td>
+                <td><b class="best-score-text">19.24</b></td>
+                <td>20.3</td>
+                <td>35.7</td>
+                <td>34.3</td>
+                <td>19.8</td>
+                <td>15.5</td>
+                <td>20.9</td>
+                <td>26.0</td>
+                <td>26.7</td>
+                <td>22.7</td>
+                <td>14.5</td>
+                <td>14.4</td>
+                <td>16.5</td>
+                <td>18.9</td>
+                <td>10.3</td>
+                <td>26.1</td>
+                <td>17.3</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td><b class="">Gemini Pro</b></td>
+                <td><a href="https://arxiv.org/abs/2312.11805" class="ext-link" style="font-size: 16px;">Link</a></td>
                 <td>2024-02-21</td>
-                <td><b class="best-score-text">17.66</b></td>
+                <td><b class="">17.66</b></td>
                 <td>15.1</td>
                 <td>10.7</td>
                 <td>20.7</td>
@@ -362,9 +453,33 @@
                 <td>20.8</td>
               </tr>
               <tr>
-                <td>4</td>
+                <td>7</td>
+                <td><b class="">InternVL-Chat-V1-2-Plus</b></td>
+                <td><a href="https://github.com/OpenGVLab/InternVL" class="ext-link" style="font-size: 16px;">Link</a>
+                </td>
+                <td>2024-02-22</td>
+                <td><b class="">16.97</b></td>
+                <td>11.3</td>
+                <td>25.0</td>
+                <td>15.7</td>
+                <td>16.9</td>
+                <td>10.1</td>
+                <td>11.9</td>
+                <td>16.4</td>
+                <td>15.6</td>
+                <td>19.3</td>
+                <td>22.5</td>
+                <td>16.4</td>
+                <td>22.5</td>
+                <td>14.3</td>
+                <td>17.2</td>
+                <td>4.4</td>
+                <td>20.8</td>
+              </tr>
+              <tr>
+                <td>8</td>
                 <td><b class="">Qwen-VL-Max</b></td>
-                <!-- <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td> -->
+                <td><a href="https://github.com/QwenLM/Qwen-VL" class="ext-link" style="font-size: 16px;">Link</a></td>
                 <td>2024-02-21</td>
                 <td><b class="">15.59</b></td>
                 <td>10.7</td>
@@ -385,9 +500,10 @@
                 <td>17.3</td>
               </tr>
               <tr>
-                <td>5</td>
+                <td>9</td>
                 <td><b>InternLM-XComposer2-VL</b></td>
-                <!-- <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td> -->
+                <td><a href="https://github.com/InternLM/InternLM-XComposer" class="ext-link"
+                    style="font-size: 16px;">Link</a></td>
                 <td>2024-02-21</td>
                 <td><b class="">14.54</b></td>
                 <td>9.3</td>
@@ -409,9 +525,9 @@
               </tr>
 
               <tr>
-                <td>6</td>
+                <td>10</td>
                 <td><b>GPT 4-CoT (caption)</b></td>
-                <!-- <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td> -->
+                <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
                 <td>2024-02-21</td>
                 <td><b class="">13.10</b></td>
                 <td>16.5</td>
@@ -432,9 +548,9 @@
                 <td>12.5</td>
               </tr>
               <tr>
-                <td>7</td>
+                <td>11</td>
                 <td><b>ShareGPT4V-13B</b></td>
-                <!-- <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td> -->
+                <td><a href="https://sharegpt4v.github.io/" class="ext-link" style="font-size: 16px;">Link</a></td>
                 <td>2024-02-21</td>
                 <td><b class="">11.88</b></td>
                 <td>7.5</td>
@@ -455,9 +571,9 @@
                 <td>12.5</td>
               </tr>
               <tr>
-                <td>8</td>
+                <td>12</td>
                 <td><b>LLaVA-v1.5-13B</b></td>
-                <!-- <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td> -->
+                <td><a href="https://llava-vl.github.io/" class="ext-link" style="font-size: 16px;">Link</a></td>
                 <td>2024-02-21</td>
                 <td><b class="">11.12</b></td>
                 <td>7.0</td>
@@ -478,9 +594,9 @@
                 <td>10.7</td>
               </tr>
               <tr>
-                <td>9</td>
+                <td>13</td>
                 <td><b>Qwen-VL-Plus</b></td>
-                <!-- <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td> -->
+                <td><a href="https://github.com/QwenLM/Qwen-VL" class="ext-link" style="font-size: 16px;">Link</a></td>
                 <td>2024-02-21</td>
                 <td><b class="">10.72</b></td>
                 <td>11.3</td>
@@ -501,9 +617,9 @@
                 <td>11.31</td>
               </tr>
               <tr>
-                <td>10</td>
+                <td>14</td>
                 <td><b>ShareGPT4V-7B</b></td>
-                <!-- <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td> -->
+                <td><a href="https://sharegpt4v.github.io/" class="ext-link" style="font-size: 16px;">Link</a></td>
                 <td>2024-02-21</td>
                 <td><b class="">10.53</b></td>
                 <td>5.5</td>
@@ -524,9 +640,10 @@
                 <td>11.3</td>
               </tr>
               <tr>
-                <td>11</td>
+                <td>15</td>
                 <td><b>SPHINX (V2)</b></td>
-                <!-- <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td> -->
+                <td><a href="https://github.com/Alpha-VLLM/LLaMA2-Accessory/tree/main/SPHINX" class="ext-link"
+                    style="font-size: 16px;">Link</a></td>
                 <td>2024-02-21</td>
                 <td><b class="">9.70</b></td>
                 <td>6.7</td>
@@ -547,9 +664,9 @@
                 <td>6.0</td>
               </tr>
               <tr>
-                <td>12</td>
+                <td>16</td>
                 <td><b>LLaVA-v1.5-7B</b></td>
-                <!-- <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td> -->
+                <td><a href="https://llava-vl.github.io/" class="ext-link" style="font-size: 16px;">Link</a></td>
                 <td>2024-02-21</td>
                 <td><b class="">8.52</b></td>
                 <td>7.0</td>
@@ -573,7 +690,8 @@
               <tr>
                 <td>*</td>
                 <td><b>Random Chance</b></td>
-                <!-- <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td> -->
+                <td><a href="https://huggingface.co/datasets/MathLLMs/MathVision" class="ext-link"
+                    style="font-size: 16px;">Link</a></td>
                 <td>2024-02-21</td>
                 <td><b class="">7.17</b></td>
                 <td>1.5</td>
@@ -615,8 +733,6 @@
             <b> TransG</b>: transformation geometry.
             <br>
             <br>
-            <div>
-            </div>
           </div>
 
         </div>
@@ -828,17 +944,9 @@
     <div class="container is-max-desktop content">
       <h2 class="title is-3 has-text-centered">Acknowledgement</h2>
       We would like to thank <a href="https://mathvista.github.io/">MathVista</a> for this website, which is
-            adapted from <a href="https://nerfies.github.io/">Nerfies</a>, licensed under a
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-              Commons Attribution-ShareAlike 4.0 International License</a>.
-            <pre>
-                <code>@inproceedings{lu2024mathvista,
-                  author    = {Lu, Pan and Bansal, Hritik and Xia, Tony and Liu, Jiacheng and Li, Chunyuan and Hajishirzi, Hannaneh and Cheng, Hao and Chang, Kai-Wei and Galley, Michel and Gao, Jianfeng},
-                  title     = {MathVista: Evaluating Mathematical Reasoning of Foundation Models in Visual Contexts},
-                  booktitle={International Conference on Learning Representations (ICLR)},
-                  year      = {2024}
-                }</code>
-        </pre>
+      adapted from <a href="https://nerfies.github.io/">Nerfies</a>, licensed under a
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+        Commons Attribution-ShareAlike 4.0 International License</a>.
     </div>
   </section>
 
